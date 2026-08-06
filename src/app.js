@@ -12,6 +12,7 @@ import dashboardRoutes from "./modules/dashboard/dashboard.routes.js";
 import productSizeRoutes from "./modules/product-sizes/product-size.routes.js";
 import productImageRoutes from "./modules/product-images/product-image.routes.js";
 import authRoutes from "./modules/auth/auth.routes.js";
+import sitemapRoutes from "./modules/sitemap/sitemap.routes.js";
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/product-sizes", productSizeRoutes);
 app.use("/api/product-images", productImageRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/sitemap.xml", sitemapRoutes);
 
 // Middleware de errores
 app.use((err, req, res, next) => {
