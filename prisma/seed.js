@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 async function main() {
 
-    const email = "admin@tnis.pe";
+    const email = "panda@gmail.com";
 
     const existingUser = await prisma.user.findUnique({
         where: {
@@ -18,7 +18,7 @@ async function main() {
         return;
     }
 
-    const password = await bcrypt.hash("Admin123*", 12);
+    const password = await bcrypt.hash("panda2026web@*", 12);
 
     await prisma.user.create({
         data: {

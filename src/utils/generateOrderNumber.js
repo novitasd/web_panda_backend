@@ -12,15 +12,15 @@ export const generateOrderNumber = async () => {
     });
 
     if (!lastOrder) {
-        return "TNIS-000001";
+        return "PANDA-000001";
     }
 
     const lastNumber = Number(
-        lastOrder.orderNumber.replace("TNIS-", "")
+        lastOrder.orderNumber.replace("PANDA-", "")
     );
 
     const nextNumber = String(lastNumber + 1).padStart(6, "0");
 
-    return `TNIS-${nextNumber}`;
+    return `PANDA-${nextNumber}`;
 
 };
